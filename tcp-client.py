@@ -22,7 +22,7 @@ def delete_scheme(remove_http):
 def run_tcp_client(host, port):
 	client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	try:
-		if target_host_port == 443:
+		if (is_ssl_preset == True):
 			client.connect((host, port))
 			context = ssl.create_default_context()
 			client = context.wrap_socket(client, server_hostname=host)
@@ -40,13 +40,15 @@ def run_tcp_client(host, port):
 if __name__ == "__main__":
 	# define parser for user input arguments
 	parser = argparse.ArgumentParser()
-	parser.add_argument("host_name", help="Define Hostname of targetz", type=str)
+	parser.add_argument("hostname_or_IP", help="Define Hostname or IP of target", type=str)
 	parser.add_argument("host_port", help="Define Port of target", type=int)
+	parser.add_argument("-ssl", "--ssl", help="Enable SSL. (Default: disabled)", action="store_true")
 	args = parser.parse_args()
 
 	# assign user inputs to variables
-	target_host_host = args.host_name
+	target_host_host = args.hostname_or_IP
 	target_host_port = args.host_port
+	is_ssl_preset = args.ssl
 
 	# run delete_scheme function to cleanup user input
 	clean_url = delete_scheme(target_host_host)
