@@ -7,9 +7,9 @@ import ssl
 from urllib.parse import urlparse
 
 
-### Script inspired by BHP book's simple tcp-client script.
-### Added arguments, ssl, error handling, etc
-## Uploaded to GitHub on 10-12-23
+### Script inspired by BHP book's simple tcp script. Based off previously uploaded tcp-client.py but added:
+### UDP and ssl options. Force placements arguments.
+## Uploaded to GitHub on 10-14-23
 
 
 # cleanup user input and remove unneeded scheme, to avoid errors
