@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 
 ### Script inspired by BHP book's simple tcp script. Based off previously uploaded tcp-client.py but added:
-### UDP and ssl options. Force placements arguments.
+### UDP and ssl options. Forced placements arguments.
 ## Uploaded to GitHub on 10-14-23
 
 
