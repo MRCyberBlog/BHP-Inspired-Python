@@ -10,3 +10,5 @@
    2. Removal of 443 if condition so -s, -ssl option is required if running on any port requiring it.
    3. Force requirements of hostname/IP and port number.
    4. Optional arguments: -u, -UDP and -s, -ssl.
+
+3. [TCP-Server](https://github.com/MRCyberBlog/BHP-Inspired-Python/blob/main/tcp-server.py) script is based off the version from the BHP book.
